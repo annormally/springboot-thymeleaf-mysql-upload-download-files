@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Boot - Thymeleaf - MySQL| Upload -- Download -- Files</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/table.css">
+</head>
+<body>
+<div id="wrapper">
+    <div id="navigator">
+        <!-- Navigator -->
+        <nav>
+            <div class="navbar">
+                <div class="navbar-banner"><a class="white" href="/"><img src="" alt="Logo"></a></div>
+                <div class="nav-links"></div>
+            </div>
+        </nav>
+    </div>
+    <div class="upload-download-card">
+        <h2 style="text-align: center">Spring Thymeleaf MySQL |
+            <a class="button-style-1" href="/">Upload</a>
+            <a class="button-style-1" href="/download/files">Download</a>
+        </h2>
+        <hr style="width: 90%; height: 2px; background-color: black;">
+        <div class="download-group">
+            <h2 style="text-align: center">Uploaded Files</h2>
+            <div class="table-container">
+                <table class="customTable">
+                    <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Filename</th>
+                        <th>Download</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="files, rowStat: ${files}">
+                    <tr th:each="file, rowStat: ${files}">
+                        <td th:text="${rowStat.count}">1</td>
+                        <td th:text="${file.fileInfoName}">File-Name</td>
+                        <td><a class="download-button" th:href="${file.fileURL}">Link</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<footer id="footer">
+    <div id="footer-content">
+        <p>Copyright ©2022 All rights reserved |</p>
+        <p title="Popa Catalin">&nbsp;Popa Catalin</p>
+    </div>
+</footer>
+</body>
+</html>

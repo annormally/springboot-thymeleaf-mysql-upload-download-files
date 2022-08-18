@@ -1,0 +1,115 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    height: 100%;
+    font-family: sans-serif, SansSerif;
+}
+
+label, input {
+    margin: 5px;
+    padding: 5px;
+}
+
+.white {
+    color: #fff;
+    text-decoration: none;
+}
+
+.button-style-1 {
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    background: gray;
+    margin: 10px;
+    padding: 10px;
+}
+
+.button-style-1:hover {
+    color: #fff;
+    text-decoration: underline;
+    border-radius: 10px;
+    background: #78a8ea;
+    margin: 10px;
+    padding: 10px;
+}
+
+.navbar {
+    height: 60px;
+    width: 100%;
+    background: #302f2f;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.navbar-banner {
+    position: absolute;
+    left: 10px;
+    margin: 5px;
+}
+
+.nav-links {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.link {
+    margin: 10px;
+    padding: 10px;
+}
+
+.upload-download-card {
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 5% 20%;
+}
+
+.message-card {
+    margin: 10px 10%;
+    padding: 15px;
+    border: 2px solid #8FBC8FFF;
+    border-radius: 5px;
+    box-shadow: #FAEBD7FF;
+}
+
+#upload-group {
+    margin: 10px;
+    padding: 5px;
+    display: grid;
+    justify-content: center;
+    height: auto;
+}
+
+#wrapper {
+    background: #808080FF;
+    color: #fff;
+    min-height: 100%;
+    height: auto !important;
+    margin-bottom: -50px;
+}
+
+#wrapper:after {
+    content: "";
+    display: block;
+    height: 50px;
+}
+
+#navigator {
+    height: 100%;
+}
+
+#footer {
+    height: 60px;
+}
+
+#footer-content {
+    background-color: #252525;
+    border: 1px solid #080408;
+    color: #fff;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

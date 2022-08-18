@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Boot - Thymeleaf - MySQL| Upload -- Download -- Files</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+<div id="wrapper">
+    <div id="navigator">
+        <!-- Navigator -->
+        <nav>
+            <div class="navbar">
+                <div class="navbar-banner"><a class="white" href="/"><img src="" alt="Logo"></a></div>
+                <div class="nav-links"></div>
+            </div>
+        </nav>
+    </div>
+    <div class="upload-download-card">
+        <h2 style="text-align: center">Spring Thymeleaf MySQL |
+            <a class="button-style-1" href="/">Upload</a>
+            <a class="button-style-1" href="/download/files">Download</a>
+        </h2>
+        <hr style="width: 90%; height: 2px; background-color: black;">
+        <div>
+            <form method="POST" enctype="multipart/form-data" id="fileUploadForm">
+                <h3 style="text-align: center">Upload One Or Multiple Files</h3>
+                <div id="upload-group">
+                    <label for="files">Upload Files:</label>
+                    <input type="file" id="files" placeholder="Upload Multiple Files" name="files" multiple>
+                    <button type="submit" class="button-style-1" id="btnSubmit">Upload</button>
+                </div>
+            </form>
+            <div>
+                <!-- Message Success|Fail-->
+                <div class="message-card" th:if="${message}">
+                    <strong><span th:text="${message}"/></strong>
+                    <hr>
+                    <ul th:each="filename: ${files}">
+                        <li><span th:text="${filename}"/></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer id="footer">
+    <div id="footer-content">
+        <p>Copyright ©2022 All rights reserved |</p>
+        <p title="Popa Catalin">&nbsp;Popa Catalin</p>
+    </div>
+</footer>
+</body>
+</html>
